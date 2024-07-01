@@ -1,0 +1,1 @@
+export const baseUrl = "https://backend-server-financial-literacy-app.vercel.app"

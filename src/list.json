@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "name": "Budgeting Basics",
+    "title": "Learn how to create and manage a budget to achieve your financial goals. Understand income, expenses, and saving strategies.",
+    "quiz": "https://www.proprofs.com/quiz-school/quizzes/budgeting-and-saving-test",
+  
+    "image": "https://i.pinimg.com/564x/d8/f8/95/d8f8956c8f8bb0f1d8e49f702c3e79f9.jpg",
+    "link":"https://en.wikipedia.org/wiki/Budget"
+  },
+
+  {
+    "id": 2,
+    "name": "Investing 101",
+    "title": "A comprehensive guide to the fundamentals of investing, including stocks, bonds, and mutual funds. Perfect for beginners.",
+    "quiz": "https://www.proprofs.com/quiz-school/topic/investment",
+ 
+    "image": "https://i.pinimg.com/564x/eb/93/f9/eb93f90b67e0022291381d4f429e4905.jpg",
+    "link":"https://en.wikipedia.org/wiki/Investment"
+  },
+
+  {
+    "id": 3,
+    "name": "Credit Management",
+    "title": "Master the art of managing your credit score, understanding credit reports, and improving your creditworthiness.",
+    "quiz": "https://www.proprofs.com/quiz-school/quizzes/fixing-your-credit-math-quiz",
+ 
+    "image": "https://i.pinimg.com/564x/33/30/85/333085dde650f2947ee328bd4e1870e2.jpg",
+    "link":"https://en.wikipedia.org/wiki/Credit_management"
+  }
+]
