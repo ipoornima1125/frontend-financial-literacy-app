@@ -2,11 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import BudgetQuiz from "./BudgetQuiz";
 import {useState} from "react";
+import Quiz from "./Quiz";
 function Cards({item}) {
   const [showQuiz, setShowQuiz] = useState(false);
 
   const handleTakeQuizClick = () => {
-    setShowQuiz(true);
+   setShowQuiz(true);
   };
   return (
    <>
@@ -28,7 +29,7 @@ function Cards({item}) {
       >
         Take a Quiz
       </button>
-      {showQuiz && <BudgetQuiz />}
+      {showQuiz && <Quiz />}
     
 
 
