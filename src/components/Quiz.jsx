@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
 
-function Quiz({ quizQuestions }) {
+function Quiz({ quizQuestions,onClose }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [isQuizCompleted, setIsQuizCompleted] = useState(false);
+
 
   useEffect(() => {
     const quizModal = document.getElementById("quiz_modal");
@@ -28,13 +29,18 @@ function Quiz({ quizQuestions }) {
       setIsQuizCompleted(true);
     }
   };
+  const handleModalClose = () => {
+    setCurrentQuestion(0);
+    setScore(0); 
+    onClose(); 
+  };
 
   return (
     <>
       <dialog id="quiz_modal" className="modal">
         <div className="modal-box">
           <form method="dialog">
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={handleModalClose}>✕</button>
           </form>
         
           {!isQuizCompleted ? (

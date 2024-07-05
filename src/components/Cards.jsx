@@ -38,7 +38,7 @@ function Cards({ item }) {
      
       {showQuiz && (
         <div className="quiz-modal">
-          <Quiz quizQuestions={item.quizQuestions} onClose={handleCloseQuizModal} />
+          <Quiz quizQuestions={item.quizQuestions} onClose={handleCloseQuizModal}/>
         </div>
       )}
     </div>
