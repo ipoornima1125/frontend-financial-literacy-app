@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import BudgetQuiz from "./BudgetQuiz";
+
 import {useState} from "react";
 import Quiz from "./Quiz";
 function Cards({item}) {
@@ -29,10 +29,8 @@ function Cards({item}) {
       >
         Take a Quiz
       </button>
-      {showQuiz && <Quiz />}
+      {showQuiz && <Quiz quizQuestions={item.quizQuestions} />}
     
-
-
 
       <Link to={item.link}>
   <button className="bg-orange-300 font-playwriteNGModern text-black px-4 py-2 mt-12 rounded-md hover:bg-orange-400 duration-300">Read More</button>

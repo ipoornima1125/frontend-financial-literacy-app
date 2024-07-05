@@ -1,31 +1,107 @@
 [
-  {
-    "id": 1,
-    "name": "Budgeting Basics",
-    "title": "Learn how to create and manage a budget to achieve your financial goals. Understand income, expenses, and saving strategies.",
-    "quiz": "https://www.proprofs.com/quiz-school/quizzes/budgeting-and-saving-test",
-  
-    "image": "https://i.pinimg.com/564x/d8/f8/95/d8f8956c8f8bb0f1d8e49f702c3e79f9.jpg",
-    "link":"https://en.wikipedia.org/wiki/Budget"
-  },
 
   {
-    "id": 2,
+    "id": 1,
     "name": "Investing 101",
     "title": "A comprehensive guide to the fundamentals of investing, including stocks, bonds, and mutual funds. Perfect for beginners.",
     "quiz": "https://www.proprofs.com/quiz-school/topic/investment",
- 
     "image": "https://i.pinimg.com/564x/eb/93/f9/eb93f90b67e0022291381d4f429e4905.jpg",
-    "link":"https://en.wikipedia.org/wiki/Investment"
+    "link": "https://en.wikipedia.org/wiki/Investment",
+    "quizQuestions": [
+      {
+        "questionText": "What is a stock?",
+        "answerOptions": [
+          { "answerText": "A type of bread", "isCorrect": false },
+          { "answerText": "A financial instrument representing ownership in a company", "isCorrect": true },
+          { "answerText": "A type of bond", "isCorrect": false }
+        ]
+      },
+      {
+        "questionText": "What is diversification in investing?",
+        "answerOptions": [
+          { "answerText": "Putting all your money in one investment", "isCorrect": false },
+          { "answerText": "Spreading your investments across different assets", "isCorrect": true },
+          { "answerText": "Investing in risky assets only", "isCorrect": false }
+        ]
+      },
+      {
+        "questionText": "What is a mutual fund?",
+        "answerOptions": [
+          { "answerText": "A type of savings account", "isCorrect": false },
+          { "answerText": "A pooled investment vehicle managed by professionals", "isCorrect": true },
+          { "answerText": "A type of stock", "isCorrect": false }
+        ]
+      }
+    ]
   },
-
+  
+  {
+    "id": 2,
+    "name": "Budgeting Basics",
+    "title": "Learn how to create and manage a budget to achieve your financial goals. Understand income, expenses, and saving strategies.",
+    "quiz": "https://www.proprofs.com/quiz-school/quizzes/budgeting-and-saving-test",
+    "image": "https://i.pinimg.com/564x/d8/f8/95/d8f8956c8f8bb0f1d8e49f702c3e79f9.jpg",
+    "link": "https://en.wikipedia.org/wiki/Budget",
+    "quizQuestions": [
+      {
+        "questionText": "What is the first step in creating a budget?",
+        "answerOptions": [
+          { "answerText": "Start spending less", "isCorrect": false },
+          { "answerText": "Track your income and expenses", "isCorrect": true },
+          { "answerText": "Set financial goals", "isCorrect": false }
+        ]
+      },
+      {
+        "questionText": "Which of these is NOT considered a fixed expense?",
+        "answerOptions": [
+          { "answerText": "Rent/Mortgage", "isCorrect": false },
+          { "answerText": "Groceries", "isCorrect": false },
+          { "answerText": "Entertainment", "isCorrect": true }
+        ]
+      },
+      {
+        "questionText": "What is the ideal percentage of your income to save?",
+        "answerOptions": [
+          { "answerText": "10%", "isCorrect": false },
+          { "answerText": "20%", "isCorrect": true },
+          { "answerText": "There is no ideal percentage", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  
   {
     "id": 3,
     "name": "Credit Management",
     "title": "Master the art of managing your credit score, understanding credit reports, and improving your creditworthiness.",
     "quiz": "https://www.proprofs.com/quiz-school/quizzes/fixing-your-credit-math-quiz",
- 
     "image": "https://i.pinimg.com/564x/33/30/85/333085dde650f2947ee328bd4e1870e2.jpg",
-    "link":"https://en.wikipedia.org/wiki/Credit_management"
+    "link": "https://en.wikipedia.org/wiki/Credit_management",
+    "quizQuestions": [
+      {
+        "questionText": "What factors contribute to your credit score?",
+        "answerOptions": [
+          { "answerText": "Income level only", "isCorrect": false },
+          { "answerText": "Payment history, credit utilization, and length of credit history", "isCorrect": true },
+          { "answerText": "Number of credit cards only", "isCorrect": false }
+        ]
+      },
+      {
+        "questionText": "How often can you check your credit report for free?",
+        "answerOptions": [
+          { "answerText": "Once a year", "isCorrect": true },
+          { "answerText": "Every month", "isCorrect": false },
+          { "answerText": "Never", "isCorrect": false }
+        ]
+      },
+      {
+        "questionText": "What is a credit utilization ratio?",
+        "answerOptions": [
+          { "answerText": "Ratio of credit cards to loans", "isCorrect": false },
+          { "answerText": "Ratio of credit used to credit available", "isCorrect": true },
+          { "answerText": "Ratio of income to expenses", "isCorrect": false }
+        ]
+      }
+    ]
   }
 ]

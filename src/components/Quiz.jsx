@@ -1,37 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
-function Quiz() {
+function Quiz({ quizQuestions }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [isQuizCompleted, setIsQuizCompleted] = useState(false);
-
-  const questions = [
-    {
-      questionText: 'What is the first step in creating a budget?',
-      answerOptions: [
-        { answerText: 'Start spending less', isCorrect: false },
-        { answerText: 'Track your income and expenses', isCorrect: true },
-        { answerText: 'Set financial goals', isCorrect: false },
-      ],
-    },
-    {
-      questionText: 'Which of these is NOT considered a fixed expense?',
-      answerOptions: [
-        { answerText: 'Rent/Mortgage', isCorrect: false },
-        { answerText: 'Groceries', isCorrect: false },
-        { answerText: 'Entertainment', isCorrect: true },
-      ],
-    },
-    {
-      questionText: 'What is the ideal percentage of your income to save?',
-      answerOptions: [
-        { answerText: '10%', isCorrect: false },
-        { answerText: '20%', isCorrect: true },
-        { answerText: 'There is no ideal percentage', isCorrect: false },
-      ],
-    },
-  ];
 
   useEffect(() => {
     const quizModal = document.getElementById("quiz_modal");
@@ -49,7 +22,7 @@ function Quiz() {
     }
 
     const nextQuestion = currentQuestion + 1;
-    if (nextQuestion < questions.length) {
+    if (nextQuestion < quizQuestions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
       setIsQuizCompleted(true);
@@ -58,7 +31,6 @@ function Quiz() {
 
   return (
     <>
-      
       <dialog id="quiz_modal" className="modal">
         <div className="modal-box">
           <form method="dialog">
@@ -67,10 +39,9 @@ function Quiz() {
         
           {!isQuizCompleted ? (
             <>
-           
-              <h3 className="font-bold text-lg">{questions[currentQuestion].questionText}</h3>
+              <h3 className="font-bold text-lg">{quizQuestions[currentQuestion].questionText}</h3>
               <div className="py-4">
-                {questions[currentQuestion].answerOptions.map((answerOption, index) => (
+                {quizQuestions[currentQuestion].answerOptions.map((answerOption, index) => (
                   <button
                     key={index}
                     className="btn btn-primary my-2 w-full"
@@ -84,15 +55,14 @@ function Quiz() {
           ) : (
             <div>
               <h3 className="font-bold text-lg">Quiz Completed!</h3>
-              <p className="py-4 font-bold text-xl">Your score is: {score}/{questions.length}</p>
-              {score === questions.length && (
-                toast.success("Congratulations!You answered all of them correctly")
+              <p className="py-4 font-bold text-xl">Your score is: {score}/{quizQuestions.length}</p>
+              {score === quizQuestions.length && (
+                toast.success("Congratulations! You answered all of them correctly")
               )}
             </div>
           )}
         </div>
       </dialog>
-     
     </>
   );
 }
