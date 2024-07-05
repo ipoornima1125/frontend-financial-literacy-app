@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {toast,Toaster} from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
+
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -17,21 +18,19 @@ function Quiz() {
     {
       questionText: 'Which of these is NOT considered a fixed expense?',
       answerOptions: [
-        { answerText: 'Rent/Mortgage', isCorrect:false },
+        { answerText: 'Rent/Mortgage', isCorrect: false },
         { answerText: 'Groceries', isCorrect: false },
         { answerText: 'Entertainment', isCorrect: true },
       ],
     },
-
     {
-        questionText: 'What is the ideal percentage of your income to save?',
-        answerOptions: [
-          { answerText: '10%', isCorrect:false },
-          { answerText: '20%', isCorrect: true },
-          { answerText: 'There is no ideal percentage', isCorrect: false },
-        ],
-      },
-  
+      questionText: 'What is the ideal percentage of your income to save?',
+      answerOptions: [
+        { answerText: '10%', isCorrect: false },
+        { answerText: '20%', isCorrect: true },
+        { answerText: 'There is no ideal percentage', isCorrect: false },
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -43,13 +42,10 @@ function Quiz() {
 
   const handleAnswerButtonClick = (isCorrect) => {
     if (isCorrect) {
-    <Toaster/>
-      toast.success("Correct!")
+      toast.success("Correct!");
       setScore(score + 1);
-    }
-    else{
-        <Toaster/>
-       toast.error("Oops! Wrong answer")
+    } else {
+      toast.error("Oops! Wrong answer");
     }
 
     const nextQuestion = currentQuestion + 1;
@@ -62,14 +58,16 @@ function Quiz() {
 
   return (
     <>
-     
+      
       <dialog id="quiz_modal" className="modal">
         <div className="modal-box">
           <form method="dialog">
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
           </form>
+        
           {!isQuizCompleted ? (
             <>
+           
               <h3 className="font-bold text-lg">{questions[currentQuestion].questionText}</h3>
               <div className="py-4">
                 {questions[currentQuestion].answerOptions.map((answerOption, index) => (
@@ -87,10 +85,14 @@ function Quiz() {
             <div>
               <h3 className="font-bold text-lg">Quiz Completed!</h3>
               <p className="py-4 font-bold text-xl">Your score is: {score}/{questions.length}</p>
+              {score === questions.length && (
+                toast.success("Congratulations!You answered all of them correctly")
+              )}
             </div>
           )}
         </div>
       </dialog>
+     
     </>
   );
 }
