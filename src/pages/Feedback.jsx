@@ -4,6 +4,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { baseUrl } from '../url'; 
 import ReactMarkdown from 'react-markdown';
+import feedback from '../assets/feedback.json';
+import Lottie from 'lottie-react';
 function Feedback() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -34,6 +36,11 @@ function Feedback() {
   return (
     <>
       <div className="space-y-12 flex flex-col items-center justify-center min-h-screen mt-32 ">
+      <Lottie style={{
+           width:200,
+           height:200,
+         }}loop={true} animationData={feedback}></Lottie>
+
         <div className="p-4 w-full max-w-screen-lg bg-slate-200">
           <h2 className="text-3xl font-bold font-playwriteNGModern text-orange-950">Here's What you need to know:</h2>
           <ul>
