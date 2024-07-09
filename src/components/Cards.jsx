@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Quiz from './Quiz'; 
-
+import {useUser} from '../UserContext';
 function Cards({ item }) {
   const [showQuiz, setShowQuiz] = useState(false);
-
+const {user} = useUser();
   const handleTakeQuizClick = () => {
+    if(user.isLoggedIn){
     setShowQuiz(true);
+    }
+    else{
+      alert('You need to be logged in to take the quiz');
+    }
   };
 
   const handleCloseQuizModal = () => {
