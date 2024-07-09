@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import { useNavigate, useLocation } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { baseUrl } from '../url'; 
-
+import ReactMarkdown from 'react-markdown';
 function Feedback() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -40,7 +40,11 @@ function Feedback() {
             {responses.map((response, index) => (
               <li key={index} className="mt-2 p-2 border rounded">
                 <h3 className="text-lg font-semibold">Question: {response.question}</h3>
-                <p>{response.text}</p>
+                <p>
+                <ReactMarkdown>
+                {response.text}
+                </ReactMarkdown>
+                </p>
               </li>
             ))}
           </ul>
