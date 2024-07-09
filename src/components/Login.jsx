@@ -59,7 +59,7 @@ function Login() {
                   </svg>
                   <input
                     type="text"
-                    className="grow"
+                    className="grow font-sans"
                     placeholder="Email"
                     {...register("email", { required: "Email is required" })}
                   />
@@ -81,7 +81,7 @@ function Login() {
                   </svg>
                   <input
                     type="password"
-                    className="grow"
+                    className="grow font-sans"
                     placeholder="Password"
                     {...register("password", { required: "Password is required" })}
                   />
@@ -89,7 +89,7 @@ function Login() {
                 {errors.password && <p className="text-red-500">{errors.password.message}</p>}
 
                 <div className="flex flex-row justify-around">
-                  <button className="bg-orange-400 text-white rounded-md px-2 hover:bg-orange-700" type="submit">
+                  <button className="bg-orange-400 text-white rounded-md px-2 p-2 hover:bg-orange-700" type="submit">
                     Login
                   </button>
                   <p className=""> Not Registered?</p>

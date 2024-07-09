@@ -79,7 +79,7 @@ function Signup() {
                                 </svg>
                                 <input
                                     type="text"
-                                    className="grow"
+                                    className="grow font-sans"
                                     placeholder="Email"
                                     {...register('email', { required: true })}
                                 />
@@ -101,7 +101,7 @@ function Signup() {
                                 </svg>
                                 <input
                                     type="password"
-                                    className="grow"
+                                    className="grow font-sans"
                                     placeholder="Password"
                                     {...register('password', { required: true })}
                                 />
