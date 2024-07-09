@@ -33,14 +33,14 @@ function Feedback() {
 
   return (
     <>
-      <div className="space-y-12 flex flex-col items-center justify-center min-h-screen mt-32">
-        <div className="p-4 w-full max-w-screen-lg">
-          <h2 className="text-xl font-bold">Feedback on Wrong Answers:</h2>
+      <div className="space-y-12 flex flex-col items-center justify-center min-h-screen mt-32 ">
+        <div className="p-4 w-full max-w-screen-lg bg-slate-200">
+          <h2 className="text-3xl font-bold font-playwriteNGModern text-orange-950">Here's What you need to know:</h2>
           <ul>
             {responses.map((response, index) => (
-              <li key={index} className="mt-2 p-2 border rounded">
-                <h3 className="text-lg font-semibold">Question: {response.question}</h3>
-                <p>
+              <li key={index} className="mt-2 p-2 border rounded  text-black font-sans text-xl">
+                <h3 className="text-2xl font-semibold mb-3 ">Question: {response.question}</h3>
+                <p >
                 <ReactMarkdown>
                 {response.text}
                 </ReactMarkdown>
