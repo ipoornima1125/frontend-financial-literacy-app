@@ -10,6 +10,7 @@ import NavbarComponent from './components/Navbar.jsx';
 import { UserProvider } from './UserContext.jsx';
 import { Toaster } from 'react-hot-toast';
 import ProfileUser from './pages/ProfileUser.jsx';
+import Feedback from './pages/Feedback.jsx';
 export default function App() {
   return (
     <UserProvider>
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/userprofile" element={<ProfileUser />} />
+          <Route path="/feedback" element={<Feedback/>} />
         </Routes>
         <Toaster />
       </div>
