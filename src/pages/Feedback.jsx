@@ -48,7 +48,7 @@ function Feedback() {
               <li key={index} className="mt-2 p-2 border rounded  text-black font-sans text-xl">
                 <h3 className="text-2xl font-semibold mb-3 ">Question: {response.question}</h3>
                 <p >
-                <ReactMarkdown>
+                <ReactMarkdown className="text-xl">
                 {response.text}
                 </ReactMarkdown>
                 </p>
