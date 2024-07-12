@@ -23,12 +23,12 @@ function Feedback() {
       })
         .then(response => response.json())
         .then(data => {
-          console.log('Gemini Responses:', data);
+          console.log('OpenAI Responses:', data);
           setResponses(data.responses || []);
         })
         .catch(error => {
-          console.error('Error sending request to Gemini:', error);
-          toast.error('Error communicating with Gemini');
+          console.error('Error sending request to OpenAI:', error);
+          toast.error('Error communicating with OpenAI');
         });
     }
   }, [wrongAnswers]);
