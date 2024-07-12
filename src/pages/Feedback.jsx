@@ -14,7 +14,7 @@ function Feedback() {
 
   useEffect(() => {
     if (wrongAnswers.length > 0) {
-      fetch(`${baseUrl}/gemini/send-to-gemini`, {
+      fetch(`${baseUrl}/openai/send-to-openai`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
